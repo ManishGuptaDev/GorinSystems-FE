@@ -7,6 +7,7 @@ import Building from "@/assets/icons/Building";
 import WareHouse from "@/assets/icons/WareHouse";
 import Hotel from "@/assets/icons/Hotel";
 import Land from "@/assets/icons/Land";
+import SampleListing from "../SampleListing";
 
 const itmes = [
   {
@@ -57,6 +58,7 @@ const LandingPage: FC = () => {
           })}
         </div>
       </div>
+      <SampleListing />
     </div>
   );
 };
