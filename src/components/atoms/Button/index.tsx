@@ -10,6 +10,7 @@ interface ButtonProps {
   isDisabled?: boolean;
   onClick?: () => void;
   children: React.ReactNode; // Text or content inside the button
+  customStyles?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,11 +20,12 @@ const Button: React.FC<ButtonProps> = ({
   isDisabled = false,
   onClick,
   children,
+  customStyles,
 }) => {
   // Determine button classes based on props
   const buttonClass = `${styles.button} ${styles[color]} ${styles[variant]} ${
     isDisabled ? styles.disabled : ""
-  }`;
+  } ${customStyles}`;
 
   return (
     <button
@@ -31,8 +33,8 @@ const Button: React.FC<ButtonProps> = ({
       onClick={!isDisabled ? onClick : undefined}
       disabled={isDisabled}
     >
-      {icon && <span>{icon}</span>}
       {children}
+      {icon}
     </button>
   );
 };

@@ -1,0 +1,123 @@
+.banner {
+    padding: 80px 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 576px;
+}
+
+.title {
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 66px;
+}
+
+.title .highlight {
+    font-weight: 700;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.btn {
+    height: 48px;
+}
+
+.ctas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.video {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.text {
+    font-size: 16.8px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #2F2F2F;
+}
+
+.right {
+    width: 100%;
+    max-width: 528.73px;
+}
+
+.imageContainer {
+    position: relative; /* Required for layout="fill" */
+    width: auto; /* Width can be auto or any specific value */
+    height: 455px;
+    overflow: hidden; /* Optional: hides any overflow */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .banner {
+        flex-direction: column;
+        padding: 40px 16px;
+        gap: 50px;
+    }
+
+    .left {
+        max-width: none
+    }
+
+    .right {
+        max-width: none;
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .banner {
+        padding: 40px 16px;
+    }
+
+    .left {
+        padding: 0;
+        gap: 20px;
+    }
+
+    .title {
+        text-align: center;
+        font-size: 30px;
+        line-height: 43px;
+    }
+
+    .description {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .ctas {
+        flex-direction: column;
+    }
+
+    .btnwrapper {
+        width: 100%;
+    }
+
+    .imageContainer {
+        height: 317px;
+    }
+}
