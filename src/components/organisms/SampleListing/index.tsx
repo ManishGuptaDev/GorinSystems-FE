@@ -1,4 +1,6 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 
 import styles from "./SampleListing.module.css";
@@ -23,6 +25,26 @@ const itmes = [
 ];
 
 const SampleListing: FC = () => {
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+
+  // Effect to handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallDevice(window.innerWidth < 768);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener for resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -34,8 +56,8 @@ const SampleListing: FC = () => {
                 <Image
                   src={item.src}
                   alt={item.name}
-                  width={357}
-                  height={276}
+                  width={isSmallDevice ? 290 : 357}
+                  height={isSmallDevice ? 224 : 276}
                 ></Image>
                 <div className={styles.detail}>
                   <div>
