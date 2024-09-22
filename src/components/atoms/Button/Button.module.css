@@ -12,6 +12,7 @@
     gap: 12px; /* Space between icon and text */
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .primary {

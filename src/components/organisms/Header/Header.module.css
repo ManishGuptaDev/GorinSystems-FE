@@ -24,3 +24,17 @@
 .login {
     font-weight: 500;
 }
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .header {
+        padding: 14px 18px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none; /* Hide the nav links */
+    }
+}
