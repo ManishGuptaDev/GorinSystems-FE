@@ -3,7 +3,7 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     border-radius: 5px;
     transition: background-color 0.2s, color 0.2s;
     width: 100%;

@@ -26,6 +26,7 @@ const links = [
 
 const Header: FC = () => {
   const [isSmallDevice, setIsSmallDevice] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   // Effect to handle window resize
   useEffect(() => {
@@ -44,6 +45,10 @@ const Header: FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen((prevState) => !prevState);
+  };
 
   return (
     <div className={styles.header}>
@@ -73,8 +78,27 @@ const Header: FC = () => {
         </nav>
       )}
       {isSmallDevice && (
-        <div className={styles.menuButton}>
+        <div className={styles.menuButton} onClick={toggleDrawer}>
           <Menu />
+        </div>
+      )}
+      {isSmallDevice && isDrawerOpen && (
+        <div className={styles.drawerMenu}>
+          <ul>
+            {links.map((link) => (
+              <li key={link.name} className={styles[link.name.toLowerCase()]}>
+                <Link href={link.href}>
+                  {link.icon && (
+                    <span className={styles.icon}>{link.icon}</span>
+                  )}
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Button color="primary">Try for Free</Button>
+            </li>
+          </ul>
         </div>
       )}
     </div>

@@ -37,4 +37,55 @@
     .nav ul {
         display: none; /* Hide the nav links */
     }
+
+    .menuButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .drawerMenu {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        animation: slideIn 0.3s ease-in-out;
+        padding: 22px;
+    }
+
+    .drawerMenu ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .drawerMenu li {
+        padding: 15px 0;
+    }
+
+    .drawerMenu li:not(:last-child) {
+        border-bottom: 1px solid #ECECEC; /* Apply border only to items that are not the last */
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 }
