@@ -1,0 +1,51 @@
+.container {
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+    align-items: center;
+}
+
+.heading {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 14.3px;
+    color: #7261FF;
+    width: fit-content;
+}
+
+.subheading {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #000;
+    width: fit-content;
+
+}
+
+.bottom {
+    max-width: 810px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 120px;
+}
+
+.item {
+    background: #9E9E9E1F;
+    width: 190px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
