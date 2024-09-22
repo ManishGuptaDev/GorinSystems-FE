@@ -29,3 +29,35 @@
     width: 100%;
     border-bottom: 1px solid #EAECF0 ;
 }
+
+.container {
+    padding: 20px;
+}
+
+.add {
+    margin-bottom: 20px;
+}
+
+.highlightItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for each item */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+}
+
+.dragHandle {
+    cursor: grab; /* Change cursor to indicate dragging */
+    margin-right: 10px; /* Space between drag handle and input */
+}
+
+.inputField {
+    flex-grow: 1; /* Allow input field to take available space */
+    margin-right: 10px; /* Space between input and delete button */
+}
+
+.button {
+    padding: 5px; /* Padding for buttons */
+}
