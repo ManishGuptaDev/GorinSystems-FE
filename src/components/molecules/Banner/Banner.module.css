@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background : linear-gradient(96.66deg, #D6DAFD 4.97%, #E7E4FF 91.67%);
+    background: url("../../../assets/images/bg.png") lightgray 50% / cover no-repeat;
 }
 
 .left {
